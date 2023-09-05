@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Pallete {
   static const Color blackColor = Colors.black;
   static const Color whiteColor = Colors.white;
+  static const Color redColor = Color.fromARGB(255, 236, 58, 76);
   static const Color purpleColor = Color.fromARGB(255, 70, 49, 210);
   static const Color appbarColor = Color.fromARGB(255, 254, 254, 254);
   static const Color backgroundColor = Color.fromARGB(255, 243, 244, 246);

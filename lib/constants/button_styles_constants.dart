@@ -15,4 +15,11 @@ class ButtonStylesConstants {
       ),
     );
   }
+  static ButtonStyle logoutButtonStyles({required Size size}) {
+    return ButtonStyle(
+      fixedSize: MaterialStateProperty.all<Size>(size),
+      backgroundColor: MaterialStateProperty.all<Color>(Pallete.whiteColor),
+      foregroundColor: MaterialStateProperty.all<Color>(Pallete.redColor),
+    );
+  }
 }

@@ -29,7 +29,7 @@ class BottomNavBarItem extends StatelessWidget {
               size: 15.sp),
           Text(
             text,
-            style: TextStylesConstants.bodyMedium(context)!.copyWith(
+            style: TextStylesConstants.labelLarge(context)!.copyWith(
                 color:
                     isSelected ? Pallete.purpleColor : Pallete.backgroundColor),
           ),

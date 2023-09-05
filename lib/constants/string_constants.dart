@@ -8,4 +8,5 @@ class StringConstants {
   static const String password = 'Пароль';
   static const String login = 'Войти';
   static const String register = 'Зарегистрироваться';
+  static const String logout = 'Выйти';
 }
