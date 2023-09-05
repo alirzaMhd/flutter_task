@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -11,8 +11,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoNavigationBar(
-      middle: Text(_title),
+    return AppBar(
+      title: Text(_title),
+      elevation: 0,
     );
   }
 }
