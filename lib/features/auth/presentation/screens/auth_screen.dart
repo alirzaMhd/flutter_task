@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_task/constants/constants.dart';
-import 'package:flutter_task/features/auth/domain/use_cases/use_cases.dart';
+import 'package:flutter_task/features/auth/presentation/provider/provider.dart';
 import 'package:flutter_task/features/auth/presentation/widget/widget.dart';
 import 'package:flutter_task/shared/presentation/widget/widget.dart';
 
-class LoginView extends ConsumerStatefulWidget {
-  const LoginView({super.key});
+class AuthScreen extends ConsumerStatefulWidget {
+  const AuthScreen({super.key});
 
   @override
-  ConsumerState<LoginView> createState() => _LoginViewState();
+  ConsumerState<AuthScreen> createState() => _AuthScreenState();
 }
 
-class _LoginViewState extends ConsumerState<LoginView> {
+class _AuthScreenState extends ConsumerState<AuthScreen> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -22,14 +22,6 @@ class _LoginViewState extends ConsumerState<LoginView> {
     super.dispose();
     emailController.dispose();
     passwordController.dispose();
-  }
-
-  void onLogin() {
-    // ref.read(authControllerProvider.notifier).login(
-    //       email: emailController.text,
-    //       password: passwordController.text,
-    //       context: context,
-    //     );
   }
 
   @override
@@ -53,7 +45,8 @@ class _LoginViewState extends ConsumerState<LoginView> {
                   UIConstants.authButtonWidth.w,
                   UIConstants.authButtonHeight.h,
                 ),
-                onPressed: AuthScreenUseCases.login,
+                onPressed: () => ref.read(authRepositoryProvider).login(
+                    emailController.text, passwordController.text, context),
               ),
               SizedBox(height: 19.h),
               MainButton(

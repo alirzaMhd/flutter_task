@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_task/constants/constants.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_task/features/auth/presentation/screens/auth_screen.dart';
 import 'theme/theme.dart';
 
 void main() {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: AppTheme.themeLight,
-          home: Container(),
+          home: const AuthScreen(),
         );
       },
     );

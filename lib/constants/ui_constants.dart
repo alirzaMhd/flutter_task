@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_task/features/main/presentation/screens/profile.dart';
 
 class UIConstants {
   static const double screenWidth = 375;
@@ -13,11 +14,15 @@ class UIConstants {
   static const double authFieldVerticalDividerWith = 343;
   static const double authButtonWidth = 343;
   static const double authButtonHeight = 64;
-  static const double logoutButtonHeight = 375;
-  static const double logoutButtonWidth = double.maxFinite;
+  static const double logoutButtonHeight = 55;
+  static const double logoutButtonWidth = 375;
+  static const double textfieldHeight = 61;
+  static const double textfieldWidth = 375;
+  static const double textfiledPadding = 16;
   static const List<Widget> bottomTabBarPages = [
     Scaffold(),
     Scaffold(),
     Scaffold(),
+    Profile(),
   ];
 }

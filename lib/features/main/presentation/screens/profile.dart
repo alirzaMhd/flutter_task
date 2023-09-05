@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_task/constants/constants.dart';
 import 'package:flutter_task/features/main/presentation/widget/logout_button.dart';
 import 'package:flutter_task/shared/presentation/widget/custom_app_bar.dart';
 
-class Profile extends StatelessWidget {
+class Profile extends ConsumerWidget {
   const Profile({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: const CustomAppBar(
         title: StringConstants.profile,
@@ -19,7 +20,7 @@ class Profile extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 38.h),
-            Image.asset("name", width: 64.h, height: 64.h),
+            Image.asset(AssetConstants.profilePic, width: 64.h, height: 64.h),
             SizedBox(height: 15.h),
             Center(
               child: Text(
@@ -40,7 +41,7 @@ class Profile extends StatelessWidget {
             LogoutButton(
                 text: StringConstants.logout,
                 size: Size(
-                  UIConstants.logoutButtonWidth,
+                  UIConstants.logoutButtonWidth.w,
                   UIConstants.logoutButtonHeight.h,
                 ),
                 onPressed: () {})

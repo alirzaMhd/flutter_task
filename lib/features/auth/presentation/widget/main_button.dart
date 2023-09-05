@@ -19,7 +19,11 @@ class MainButton extends StatelessWidget {
     return FilledButton(
       onPressed: onPressed,
       style: ButtonStylesConstants.mainButtonStyles(size: size),
-      child: Text(_text, style: TextStylesConstants.bodyMedium(context)),
+      child: Text(
+        _text,
+        style: TextStylesConstants.bodyMedium(context)!
+            .copyWith(color: Pallete.whiteColor),
+      ),
     );
   }
 }

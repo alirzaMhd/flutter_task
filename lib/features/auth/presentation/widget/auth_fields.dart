@@ -15,13 +15,28 @@ class AuthFields extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Pallete.whiteColor,
-        child: Column(
-          children: [
-            CustomTextField(hintText: StringConstants.email, controller: emailController),
-            VerticalDivider(width: UIConstants.authFieldVerticalDividerWith.w,),
-            CustomTextField(hintText: StringConstants.password, controller: passwordController),
-          ],
-        ));
+      color: Pallete.whiteColor,
+      child: Column(
+        children: [
+          SizedBox(
+            height: UIConstants.textfieldHeight.h,
+            width: UIConstants.textfieldWidth.w,
+            child: CustomTextField(
+                hintText: StringConstants.email, controller: emailController),
+          ),
+          VerticalDivider(
+            width: UIConstants.authFieldVerticalDividerWith.w,
+          ),
+          SizedBox(
+            height: UIConstants.textfieldHeight.h,
+            width: UIConstants.textfieldWidth.w,
+            child: CustomTextField(
+              hintText: StringConstants.password,
+              controller: passwordController,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

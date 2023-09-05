@@ -1,5 +1,4 @@
-class AppwriteConstants {
-  static const String projectId = '64e44300cd29d7c555a3';
-  static const String databaseId = '64e73a16da60a99ee547';
-  static const String endPoint = 'https://cloud.appwrite.io/v1';
+class BackendConstants {
+  static const String apiLink = 'http://45.10.110.181:8080';
+  static const String loginLink = '$apiLink/api/v1/auth/login';
 }

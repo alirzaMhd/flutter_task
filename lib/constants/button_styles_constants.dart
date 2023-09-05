@@ -15,11 +15,20 @@ class ButtonStylesConstants {
       ),
     );
   }
+
   static ButtonStyle logoutButtonStyles({required Size size}) {
     return ButtonStyle(
+      alignment: Alignment.centerLeft,
+      padding: MaterialStateProperty.all(EdgeInsets.zero),
       fixedSize: MaterialStateProperty.all<Size>(size),
+      elevation: MaterialStateProperty.all(0),
       backgroundColor: MaterialStateProperty.all<Color>(Pallete.whiteColor),
       foregroundColor: MaterialStateProperty.all<Color>(Pallete.redColor),
+      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        const RoundedRectangleBorder(
+          borderRadius: BorderRadius.zero,
+        ),
+      ),
     );
   }
 }
