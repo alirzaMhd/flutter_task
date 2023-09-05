@@ -1,40 +1,20 @@
 import 'package:flutter/material.dart';
-
 class TextStylesConstants {
   //TODO make font sizes responsive
   static const String caremSansFontFamily = 'CarmenSans';
 
-  static const double headLargeFontSize = 30;
-  static const double headMediumFontSize = 25;
-  static const double headSmallFontSize = 20;
+  static const double titleLargeFontSize = 15;
+  static const double bodyLargeFontSize = 24;
+  static const double bodyMediumFontSize = 16;
+  static const double bodySmallFontSize = 15;
+  static const double labelLargeFontSize=10;
 
-  static const double bodyLargeFontSize = 15;
-  static const double bodyMediumFontSize = 10;
 
-  static const FontWeight heavyFontWeight = FontWeight.w900;
-  static const FontWeight regularFontWeight = FontWeight.w900;
-
-  static TextStyle? headlineLarge(BuildContext context) {
-    return Theme.of(context).textTheme.headlineLarge?.copyWith(
+  static TextStyle? titleLarge(BuildContext context) {
+    return Theme.of(context).textTheme.titleLarge?.copyWith(
           fontFamily: caremSansFontFamily,
-          fontSize: headLargeFontSize,
-          fontWeight: heavyFontWeight,
-        );
-  }
-
-  static TextStyle? headlineMedium(BuildContext context) {
-    return Theme.of(context).textTheme.headlineMedium?.copyWith(
-          fontFamily: caremSansFontFamily,
-          fontSize: headMediumFontSize,
-          fontWeight: heavyFontWeight,
-        );
-  }
-
-  static TextStyle? headlineSmall(BuildContext context) {
-    return Theme.of(context).textTheme.headlineSmall?.copyWith(
-          fontFamily: caremSansFontFamily,
-          fontSize: headSmallFontSize,
-          fontWeight: heavyFontWeight,
+          fontSize: titleLargeFontSize,
+          fontWeight: FontWeight.w500,
         );
   }
 
@@ -42,15 +22,31 @@ class TextStylesConstants {
     return Theme.of(context).textTheme.bodyLarge?.copyWith(
           fontFamily: caremSansFontFamily,
           fontSize: bodyLargeFontSize,
-          fontWeight: heavyFontWeight,
+          fontWeight: FontWeight.w600,
         );
   }
 
   static TextStyle? bodyMedium(BuildContext context) {
-    return Theme.of(context).textTheme.bodyLarge?.copyWith(
+    return Theme.of(context).textTheme.bodyMedium?.copyWith(
           fontFamily: caremSansFontFamily,
           fontSize: bodyMediumFontSize,
-          fontWeight: heavyFontWeight,
+          fontWeight: FontWeight.w700,
+        );
+  }
+
+  static TextStyle? bodySmall(BuildContext context) {
+    return Theme.of(context).textTheme.bodySmall?.copyWith(
+          fontFamily: caremSansFontFamily,
+          fontSize: bodySmallFontSize,
+          fontWeight: FontWeight.w400,
+        );
+  }
+
+  static TextStyle? labelLarge(BuildContext context) {
+    return Theme.of(context).textTheme.labelLarge?.copyWith(
+          fontFamily: caremSansFontFamily,
+          fontSize: labelLargeFontSize,
+          fontWeight: FontWeight.w400,
         );
   }
 

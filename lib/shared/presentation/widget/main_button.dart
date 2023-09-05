@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_task/constants/constants.dart';
-import 'package:period_tracker/constants/constants.dart';
 
 class RoundedButton extends StatelessWidget {
   final String _text;
@@ -20,8 +18,8 @@ class RoundedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FilledButton(
       onPressed: onPressed,
-      style: 
-      child: Text(_text),
+      style: const ButtonStyle(),
+      child: Text(_text, style: TextStylesConstants.bodyMedium(context)),
     );
   }
 }
