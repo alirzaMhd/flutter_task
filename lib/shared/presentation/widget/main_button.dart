@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_task/constants/constants.dart';
 
-class RoundedButton extends StatelessWidget {
+class MainButton extends StatelessWidget {
   final String _text;
   final Size size;
   final VoidCallback onPressed;
 
-  const RoundedButton({
+  const MainButton({
     Key? key,
     required text,
     required this.size,
