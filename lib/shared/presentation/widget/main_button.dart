@@ -18,7 +18,7 @@ class RoundedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FilledButton(
       onPressed: onPressed,
-      style: const ButtonStyle(),
+      style: ButtonStylesConstants.mainButtonStyles(size: size),
       child: Text(_text, style: TextStylesConstants.bodyMedium(context)),
     );
   }

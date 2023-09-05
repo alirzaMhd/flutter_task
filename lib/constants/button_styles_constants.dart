@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_task/constants/constants.dart';
 
 class ButtonStylesConstants {
-  static ButtonStyle textButtonStyle({required Size size}) {
+  static ButtonStyle mainButtonStyles({required Size size}) {
     return ButtonStyle(
       fixedSize: MaterialStateProperty.all<Size>(size),
       foregroundColor: MaterialStateProperty.all<Color>(Pallete.whiteColor),
