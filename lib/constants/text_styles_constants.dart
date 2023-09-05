@@ -6,7 +6,7 @@ class TextStylesConstants {
   static const double titleLargeFontSize = 15;
   static const double bodyLargeFontSize = 24;
   static const double bodyMediumFontSize = 16;
-  static const double bodySmallFontSize = 15;
+  static const double bodySmallFontSize = 16;
   static const double labelLargeFontSize=10;
 
 
